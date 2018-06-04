@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lunch</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+	<h1>Personal Diet Problem Solver With Cost Optimization</h1>
+</header>
+<div id = "container">
+	<h2>Please select the Lunch options</h2>
+	<form action="http://localhost:5000/SNACK" method='POST'>
+		<div class = "form-group">
+			<label><h5><strong>Essential Carbs/Starch:</strong></h5></label>
+			<select required name="carb_list" id="carb_list">
+				<option>White Bread(2 slice/serving)</option>
+				<option>Wheat Bread(2 slice/serving)</option>
+				<option>Multi-Grain Bread(2 slice/serving)</option>
+				<option>white rice(1 cup/ 150 grams)</option>
+				<option>Brown rice(1 cup/ 150 grams)</option>
+			</select>
+		</div>
+		<div class = "form-group">
+			<label><h5><strong>Meat/Seafood:</strong> </h5></label>
+			<select required name="ms_list" id="ms_list">
+				<option>None</option>
+				<option>chicken breast(4oz/serving)</option>
+				<option>turkey breast (4oz/serving)</option>
+				<option>pork breast (4oz/serving)</option>
+				<option>beef breast(4oz/serving)</option>
+				<option>Blue Crab</option>
+				<option>Catfish</option>
+				<option>Clams, about 12 small</option>
+				<option>Cod</option>
+				<option>Flounder/Sole</option>
+				<option>Haddock</option>
+				<option>Halibut</option>
+				<option>Lobster</option>
+				<option>Ocean Perch</option>
+				<option>Orange Roughy</option>
+				<option>Oysters, about 12 medium</option>
+				<option>Pollock</option>
+				<option>Rainbow Trout</option>
+				<option>Rockfish</option>
+				<option>Salmon, Atlantic/Coho/Sockeye /Chinook</option>
+				<option>Salmon, Chum/Pink</option>
+				<option>Scallops, about 6 large or 14 small</option>
+				<option>Shrimp about 6 to 8 pieces </option>
+				<option>Swordfish</option>
+				<option>Tilapia</option>
+				<option>Tuna</option>
+			</select>
+		</div>
+		<div class = "form-group">
+			<label><h5><strong>Select 4 veggies:</strong> </h5></label>
+			<br>
+			<select required multiple name="veggie_list" id="veggie_list">
+				<option>Asparagus, 5 spears (93 g/3.3 oz)</option>
+				<option>Bell Pepper, 1 medium (148 g/5.3 oz)</option>
+				<option>Broccoli, 1 medium stalk (148 g/5.3 oz)</option>
+				<option>Carrot, 1 carrot, (78 g/2.8 oz)</option>
+				<option>Cauliflower, 1/6 medium head (99 g/3.5 oz)</option>
+				<option>Celery, 2 medium stalks (110 g/3.9 oz)</option>
+				<option>Green (Snap) Beans, 3/4 cup cut (83 g/3.0 oz)</option>
+				<option>Green Cabbage, 1/12 medium head (84 g/3.0 oz)</option>
+				<option>Green Onion, 1/4 cup chopped (25 g/0.9 oz)</option>
+				<option>Mushrooms, 5 medium (84 g/3.0 oz)</option>
+				<option>Onion, 1 medium (148 g/5.3 oz)</option>
+				<option>Potato, 1 medium (148 g/5.3 oz)</option>
+				<option>Radishes, 7 radishes (85 g/3.0 oz)</option>
+				<option>Summer Squash, 1/2 medium (98 g/3.5 oz)</option>
+				<option>Sweet Corn, kernels from 1 medium ear (90 g/3.2 oz)</option>
+				<option>Sweet Potato, 1 medium, (130 g/4.6 oz)</option>
+			</select>
+		</div>
+		<div class = "form-group">
+			<label><h5><strong>Select 3 Salad Essentials:</strong> </h5></label>
+			<br>
+			<select required multiple name="green_list" id="green_list">
+				<option>Mix sprouts (1 cup/serving)</option>
+				<option>Baby spinach (1 cup 30gm/serving)</option>
+				<option>kale (1 cup chopped 67gm/serving)</option>
+				<option>Spring mix (1 cup/serving)</option>
+				<option>Red Cabbage (1 cup chopped 80gm/serving)</option>
+				<option>Cherry Tomatoes (8 0z 1 cup/serving)</option>
+				<option>Iceberg Lettuce, 1/6 medium head (89 g/3.2 oz)</option>
+				<option>Leaf Lettuce, 1 1/2 cups shredded (85 g/3.0 oz)</option>
+				<option>Cucumber, 1/3 medium (99 g/3.5 oz)</option>
+				<option>Avocado, California,1/5 medium (30 g/1.1 oz)</option>
+			</select>
+		</div>
+		<div class = "form-group">
+			<label><h5><strong>Type of Cheese:</strong> </h5></label>
+			<select required name="cheese_list" id="cheese_list">
+				<option>None</option>
+				<option>cheddar (1 slice/serving)</option>
+				<option>Mozzarella (1 slice/serving)</option>
+				<option>Feta (crumbled 5gm/serving)</option>
+			</select>
+		</div>
+		<div class = "form-group">
+			<input class = "btn btn-primary" type="submit">
+		</div>
+	</form>
+</div>
+
+</body>
+</html>

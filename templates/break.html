@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>breakfast</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+	<h1>Personal Diet Problem Solver With Cost Optimization</h1>
+	<br>
+	<h3>Your BMI is <b>{{ bmi }}</b></h3>
+	<br>
+	<h3><i>{{ msg }}</i></h3>
+	<br>
+	<h3>Minimum Calorie intake per day should be <b>{{ min_cal }}</b></h3>
+</header>
+<div id = "container">
+	<h2>Please select the Breakfast options</h2>
+	<form action="http://localhost:5000/LUNCH" method="POST">
+		<div class = "form-group">
+			<label><h5><strong>Select 4 Fruits:</strong> </h5></label>
+			<br>
+			<select name = "fruit_list" id = "fruit_list" required multiple size = "5">
+
+				<option>Apple, 1 large (242 g/8 oz)</option>
+				<option>Banana, 1 medium (126 g/4.5 oz)</option>
+				<option>Cantaloupe, 1/4 medium (134 g/4.8 oz)</option>
+				<option>Grapes, 3/4 cup (126 g/4.5 oz)</option>
+				<option>Kiwifruit, 1 medium (74 g/2.65 oz)</option>
+				<option>Peach, 1 medium (147 g/5.3 oz)</option>
+				<option>Pear, 1 medium (166 g/5.9 oz)</option>
+				<option>Plums, 2 medium (151 g/5.4 oz)</option>
+				<option>Strawberries, 2 medium (37 g/1.3 oz)</option>
+				<option>Sweet Cherries 21 cherries;1 cup</option>
+				<option>Watermelon, 1/18 medium melon; 2 cups diced pieces(280 g)</option>
+
+			</select>
+		</div>
+		<br>
+		<div class = "form-group">
+			<label><h5><strong>Bread:</strong></h5></label>
+			<select name = "bread" required>
+				<option>White Bread(2 slice/serving)</option>
+				<option>Wheat Bread(2 slice/serving)</option>
+				<option>Multi-Grain Bread(2 slice/serving)</option>
+			</select>
+		</div>
+		<div class = "form-group">
+			<label><h5><strong>Beverage:</strong></h5></label>
+			<select name = "beverage" required>
+				<option>Whole milk (1 medium cup(14 fl oz)/serving)</option>
+				<option>Low fat milk (1 medium cup(14 fl oz)/serving)</option>
+				<option>Coffee w whole milk (1 medium cup(14 fl oz)/serving)</option>
+				<option>Latte w whole milk (1 medium cup(14 fl oz)/ serving)</option>
+				<option>Hot Chocolate (1 medium cup(14 fl oz)/serving)</option>
+			</select>
+		</div>
+		<div class = "form-group">
+			<label><h5><strong>Eggs:</strong></h5></label>
+			<select required name = "eggs" id ="eggs">
+				<option>Yes</option>
+				<option>No</option>
+			</select>
+
+		</div>
+		<div class = "form-group">
+			<label><h5><strong>Meat:</strong></h5></label>
+			<select name = "meat" required>
+				<option>None</option>
+				<option>Ham (1oz/serving)</option>
+				<option>Bacon (3 thin slice/serving)</option>
+			</select>
+		</div>
+		<div class = "form-group">
+			<input class = "btn btn-primary" type="submit">
+		</div>
+	</form>
+</div>
+
+</body>
+</html>

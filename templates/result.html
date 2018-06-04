@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RESULT</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Personal Diet Problem Solver With Cost Optimization</h1>
+</header>
+<div id = "container">
+    <h2>Here's Your Optimized Solution</h2>
+    <div class = "form-group">
+    <h2>Optimized Breakfast Cost $ {{ bfcost }} </h2>
+
+    <p>List of Items to Consume:</p>
+    <table border=1>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+        </tr>
+        {% for key,value in bf_val.items(): %}
+        <tr>
+          <td>{{ key }}</td>
+          <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    <div class = "form-group">
+
+    <h2>Optimized Lunch Cost $ {{ cst_l }} </h2>
+
+    <p>List of Items to Consume:</p>
+    <table border=1>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+        </tr>
+        {% for key_l,value_l in l_val.items(): %}
+        <tr>
+          <td>{{ key_l }}</td>
+          <td>{{ value_l }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    <div class = "form-group">
+    <h2>Optimized Snack Cost $ {{ cst_s }} </h2>
+
+    <p>List of Items to Consume:</p>
+    <table border=1>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+        </tr>
+        {% for key_s,value_s in s_val.items(): %}
+        <tr>
+          <td>{{ key_s }}</td>
+          <td>{{ value_s }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    <div class = "form-group">
+    <h2>Optimized Dinner Cost $ {{ cst_d }} </h2>
+
+    <p>List of Items to Consume:</p>
+    <table border=1>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+        </tr>
+        {% for key_d,value_d in d_val.items(): %}
+        <tr>
+          <td>{{ key_d }}</td>
+          <td>{{ value_d }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    <div>
+        <h2>The total cost for all the meals per day is $ <strong>{{ total }}</strong></h2>
+    </div>
+
+</div>
+
+</body>
+</html>
